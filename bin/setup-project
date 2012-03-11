@@ -1,0 +1,14 @@
+#!/usr/local/bin/zsh
+
+mkdir $1
+cd $1
+PROJECT_NAME=`pwd | xargs basename`
+mkdir lib
+touch ./lib/index.js
+mkdir test
+cp ~/share/setup-project/mocha.opts ./test/
+touch ./test/test.coffee
+touch README.md
+git init
+git add .
+npm init
